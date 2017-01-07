@@ -1,0 +1,478 @@
+﻿@{
+    ViewData["Title"] = "灃和金箔";
+}
+
+<!-- start preloader -->
+<div id="loader-wrapper">
+    <div class="logo"></div>
+    <div id="loader">
+    </div>
+</div>
+<!-- end preloader -->
+<!-- start header section -->
+<header class="main_menu_sec navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-12">
+                <div class="lft_hd">
+                    <a href="/">
+                        <img src="~/images/Logo.gif" alt="" />
+                        <span class="logoname">灃和金箔</span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-3 col-sm-12">
+                <div class="rgt_hd">
+                    <div class="main_menu">
+                        <nav id="nav_menu">
+                            <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <div id="navbar">
+                                <ul>
+                                    <li>
+                                        <a class="page-scroll" href="/">Home 首頁</a>
+                                    </li>
+                                    <li>
+                                        <a class="page-scroll" href="#abt_sec">About 產品資訊</a>
+                                    </li>
+                                    <li>
+                                        <a class="page-scroll" href="#protfolio_sec">Intro 公司介紹 <i class="fa fa-angle-down"></i></a>
+                                        <ul>
+                                            <li><a class="page-scroll" href="#protfolio_sec">熔金</a></li>
+                                            <li><a class="page-scroll" href="#protfolio_sec">壓延</a></li>
+                                            <li><a class="page-scroll" href="#protfolio_sec">捶打</a></li>
+                                            <li><a class="page-scroll" href="#protfolio_sec">出箔</a></li>
+                                            <li><a class="page-scroll" href="#protfolio_sec">剪裁</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a class="page-scroll" href="#ctn_sec">Contact 聯繫我們</a>
+                                    </li>
+                                    <li>
+                                        <a class="page-scroll" href="#ft_sec">Location 位置圖</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- end header serction -->
+<!-- start slider section -->
+<section id="slider_sec">
+    <div class="container">
+        <div class="row">
+            <div class="slider">
+                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <div class="wrap_caption">
+                                <div class="caption_carousel">
+                                    <h1>We are Friending</h1>
+                                    <p>我們是灃和金箔</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="wrap_caption">
+                                <div class="caption_carousel">
+                                    <h1>We are Creative</h1>
+                                    <p>金箔製造.品質.服務.技術</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item ">
+                            <div class="wrap_caption">
+                                <div class="caption_carousel">
+                                    <h1>We Have Greate Team</h1>
+                                    <p>永續成長.團結努力</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Controls -->
+                    <a class="left left_crousel_btn" href="#carousel-example-generic" role="button" data-slide="prev">
+                        <i class="fa fa-angle-left"></i>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right right_crousel_btn" href="#carousel-example-generic" role="button" data-slide="next">
+                        <i class="fa fa-angle-right"></i>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end slider section -->
+<!-- start about Section -->
+<section id="abt_sec">
+    <div class="container">
+        <div class="row">
+            <div class="title_sec">
+                <h1>金箔規格</h1>
+            </div>
+            <button class="btn-info btn" onclick="GetGoldPrice()">取得最新價格</button>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs12 ">
+                <table class="table">
+                    <thead class="thead-inverse">
+                        <tr>
+                            <th>#</th>
+                            <th>金箔種類</th>
+                            <th>金箔大小</th>
+                            <th>金箔尺寸</th>
+                            <th>單張約價</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>一號金箔</td>
+                            <td>九分</td>
+                            <td>2.65公分 x 2.65公分</td>
+                            <td id="type0"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>一號金箔</td>
+                            <td>一吋二</td>
+                            <td>3.55公分 x 3.55公分</td>
+                            <td id="type1"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>一號金箔</td>
+                            <td>一吋八</td>
+                            <td>5.40公分 x 5.40公分</td>
+                            <td id="type2"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>一號金箔</td>
+                            <td>三吋六</td>
+                            <td>10.9公分 x 10.9公分</td>
+                            <td id="type3"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td>四號金箔</td>
+                            <td>九分</td>
+                            <td>2.65公分 x 2.65公分</td>
+                            <td id="type4"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">6</th>
+                            <td>四號金箔</td>
+                            <td>一吋二</td>
+                            <td>3.55公分 x 3.55公分</td>
+                            <td id="type5"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">7</th>
+                            <td>四號金箔</td>
+                            <td>一吋八</td>
+                            <td>5.40公分 x 5.40公分</td>
+                            <td id="type6"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">8</th>
+                            <td>四號金箔</td>
+                            <td>三吋六</td>
+                            <td>10.9公分 x 10.9公分</td>
+                            <td id="type7"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End About Section -->
+<!-- start portfolio section -->
+<section id="protfolio_sec">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs12">
+                <div class="title_sec2">
+                    <h1>Our Skill and Service</h1>
+                    <h2>THE PROCESS OF GOLD LEAF</h2>
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <div class="portfolio-filter text-uppercase text-center">
+                    <ul class="filter">
+                        <li class="active" data-filter="*">All</li>
+                        <li data-filter=".melting">Melting</li>
+                        <li data-filter=".extending">Rolling Extending</li>
+                        <li data-filter=".beating">Beating</li>
+                        <li data-filter=".interleaving">Interleaving</li>
+                    </ul>
+                </div>
+                <div class="all-portfolios">
+                    <!-- Melting -->
+                    <div class="col-sm-12  col-lg-12 col-md-12 col-xs-12 ">
+                        <div class="single-portfolio melting">
+                            <img class="img-responsive fixsize" src="~/images/metling1.jpg" alt="">
+                        </div>
+                    </div>
+                    <!-- Extending -->
+                    <div class="col-sm-12  col-lg-12 col-md-12 col-xs-12 ">
+                        <div class="single-portfolio extending">
+                            <img class="img-responsive fixsize" src="~/images/rolling1a.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-sm-12  col-lg-12 col-md-12 col-xs-12 ">
+                        <div class="single-portfolio extending">
+                            <img class="img-responsive fixsize" src="~/images/rolling1b.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-sm-12  col-lg-12 col-md-12 col-xs-12 ">
+                        <div class="single-portfolio extending">
+                            <img class="img-responsive fixsize" src="~/images/rolling1c.jpg" alt="">
+                        </div>
+                    </div>
+                    <!-- beating -->
+                    <div class="col-sm-12  col-lg-12 col-md-12 col-xs-12 ">
+                        <div class="single-portfolio beating">
+                            <img class="img-responsive fixsize" src="~/images/beating1.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-sm-12  col-lg-12 col-md-12 col-xs-12 ">
+                        <div class="single-portfolio beating">
+                            <img class="img-responsive fixsize" src="~/images/beating2.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-sm-12  col-lg-12 col-md-12 col-xs-12 ">
+                        <div class="single-portfolio beating">
+                            <img class="img-responsive fixsize" src="~/images/beating3.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-sm-12  col-lg-12 col-md-12 col-xs-12 ">
+                        <div class="single-portfolio beating">
+                            <img class="img-responsive fixsize" src="~/images/beating4.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-sm-12  col-lg-12 col-md-12 col-xs-12 ">
+                        <div class="single-portfolio beating">
+                            <img class="img-responsive fixsize" src="~/images/beating5.jpg" alt="">
+                        </div>
+                    </div>
+                    <!-- 出金箔 -->
+                    <div class="col-sm-12  col-lg-12 col-md-12 col-xs-12 ">
+                        <div class="single-portfolio interleaving">
+                            <img class="img-responsive fixsize" src="~/images/interleaving1.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-sm-12  col-lg-12 col-md-12 col-xs-12 ">
+                        <div class="single-portfolio interleaving">
+                            <img class="img-responsive fixsize" src="~/images/interleaving2.jpg" alt="">
+                        </div>
+                    </div>
+                    <!-- QA -->
+                    <div class="col-sm-12  col-lg-12 col-md-12 col-xs-12 ">
+                        <div class="single-portfolio process">
+                            <img class="img-responsive fixsize" src="~/images/examining1.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-sm-12  col-lg-12 col-md-12 col-xs-12 ">
+                        <div class="single-portfolio process">
+                            <img class="img-responsive fixsize" src="~/images/packaging1.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-sm-12  col-lg-12 col-md-12 col-xs-12 ">
+                        <div class="single-portfolio process">
+                            <img class="img-responsive fixsize" src="~/images/cutting1.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-sm-12  col-lg-12 col-md-12 col-xs-12 ">
+                        <div class="single-portfolio process">
+                            <img class="img-responsive fixsize" src="~/images/cutting2.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end portfolio section -->
+<!-- start detail of factory section -->
+<section id="tstm_sec" style="overflow:hidden;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="all_tstm">
+                    <div class="clnt_tstm">
+                        <div class="sngl_tstm">
+                            <i class="fa fa-quote-right"></i>
+                            <h3>INTRO</h3>
+                            <p>灃耘集團 2001年設立越南灃紜責任有限公司、專業生產金箔相關製品，無論在製程與品管過程中、都以最嚴格的標準，製造一系列金箔、金粉等…相關產品。</p>
+                            <h6>公司介紹</h6>
+                        </div>
+                    </div>
+                    <div class="clnt_tstm">
+                        <div class="sngl_tstm">
+                            <i class="fa fa-quote-right"></i>
+                            <h3>THINKING</h3>
+                            <p>身為專業製造商，我們可以為客戶量身訂做，製造出不同規格與含金量之產品。堅持「品質至上」才能符合客戶的需求，我們的「用心、服務」值得您的信賴。</p>
+                            <h6>公司理念</h6>
+                        </div>
+                    </div>
+                    <div class="clnt_tstm">
+                        <div class="sngl_tstm">
+                            <i class="fa fa-quote-right"></i>
+                            <h3>GLOBAL</h3>
+                            <p>擁有日本的精密技術，全球最大的金箔供應商，布局全球的供應鏈與生產線。日本技術、越南生產、台灣管理。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end detail of factory section -->
+<!-- start contact section -->
+<section id="ctn_sec">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs12 ">
+                <div class="title_sec">
+                    <h1>Contact Info</h1>
+                    <h2>歡迎您的聯繫</h2>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="cnt_info">
+                    <ul>
+                        <li><i class="fa fa-facebook"></i><p>SuccMail Group</p></li>
+                        <li><i class="fa fa-envelope"></i><p>support@458.com.tw</p></li>
+                        <li><i class="fa fa-phone"></i><p>TEL：886-4-2242-8135    FAX：886-4-2246-9042</p></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end contact section -->
+<!-- start located map Section -->
+<section id="ltd_map_sec">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="map">
+                    <h1>located THE MAP</h1>
+                    <p>406 (台灣)台中市梅川東路四段105號B1-1</p>
+                    <a href="#slidingDiv" class="show_hide" rel="#slidingDiv">
+                        <i class="fa fa-angle-up"></i>
+                    </a>
+                    <div id="slidingDiv">
+                        <div class="map_area">
+                            <div id="googleMap" style="width:100%;height:300px;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end located map  Section -->
+<!-- start footer Section -->
+<footer id="ft_sec">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <ul class="copy_right">
+                    <li>&copy;2016 越南灃和責任有限公司 All Rights Reserved</li>
+                    <li>developer by Gary Lin, SuccMail RD</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- end footer Section -->
+
+
+@section Scripts{
+    <script type="text/javascript">
+        //System.config({
+        //    packages: {
+        //        'app': {
+        //            defaultExtension: 'js'
+        //        }
+        //    }
+        //});
+        //System.import('app/main').then(null, console.error.bind(console));
+
+        $(window).load(function () { // makes sure the whole site is loaded
+            $('#status').fadeOut(); // will first fade out the loading animation
+            $('#loader-wrapper').delay(200).fadeOut('slow'); // will fade out the white DIV that covers the website.
+            $('body').delay(200).css({ 'overflow-x': 'hidden' });
+        });
+
+        $(document).ready(function ($)
+        {
+            // 取得黃金價錢
+            GetGoldPrice();
+            $('.counter').counterUp({
+                delay: 10,
+                time: 1000
+            });
+            // 觸動詳細內容Loop
+            $('.all_tstm').owlCarousel({
+                items: 1,
+                autoPlay: 5000,
+                theme: "owl-theme"
+            });
+        });
+
+        function GetGoldPrice() {
+            $.ajax({
+                url: '/Home/GetGoldPrice',
+                type: "get",
+                data: { "Url": "http://www.allbeauty.com.tw/GoldLeaf/" },
+                success: function (result) {
+                    for(var i = 0;i<result.length;i++)
+                    {
+                        console.log(i);
+                        console.log(result[i]);
+                        $("#type" + i).text(result[i]);
+                    }
+                }
+            });
+        }
+
+    </script>
+    <script>
+		function initialize() {
+			var mapOptions = {
+			zoom: 14,
+			scrollwheel: false,
+			center: new google.maps.LatLng(24.174516, 120.680599)
+			};
+			var map = new google.maps.Map(document.getElementById('googleMap'),
+				mapOptions);
+			var marker = new google.maps.Marker({
+			position: map.getCenter(),
+			animation:google.maps.Animation.BOUNCE,
+			icon: '../images/map-marker.png',
+			map: map
+			});
+		}
+		google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+}
+

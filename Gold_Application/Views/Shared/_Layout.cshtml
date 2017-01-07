@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8" />
+    <!-- 什麼版本IE 就用什麼版本的標準模式 -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="灃和金箔" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <!--[if lt IE 9]>
+        <script src="~/js/html5shiv.js"></script>
+        <script src="~/js/respond.min.js"></script>
+    <![endif]-->
+    <title>@ViewBag.Title</title>
+    <!-- Javascript File -->
+    <script src="~/Scripts/jquery/dist/jquery.min.js"></script>
+    <script src="~/Scripts/owl-carousel/owl-carousel/owl.carousel.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3SqHO6MlQl3jNbIHS-K73hYwvJAoZDfs"></script>
+    <script src="~/Scripts/site.js"></script>
+    <!-- Style File -->
+    <link rel="stylesheet" href="~/Scripts/bootstrap/dist/css/bootstrap.min.css" />
+    <link href="~/Css/font.awesome.min.css" rel="stylesheet" />
+    <link href="~/Css/site.css" rel="stylesheet" />
+    <link href="~/Css/responsive.css" rel="stylesheet" />
+    <link href="~/Css/owl.carousel.css" rel="stylesheet" />
+    <link href="~/Scripts/owl-carousel/owl-carousel/owl.theme.css" rel="stylesheet" />
+</head>
+<body>
+    <div>
+        @RenderBody()
+    </div>
+    @RenderSection("scripts", required: false)
+
+    <!--延遲載入其他的Javascripts檔案-->
+    <!-- 用來過濾圖片種類的section -->
+    <script src="~/Scripts/isotope/dist/isotope.pkgd.js"></script>
+    <script src="~/Scripts/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="~/Scripts/appear/jquery.appear.js"></script>
+    <script src="~/Scripts/jquery-counterup/jquery.counterup.min.js"></script>
+    <script src="~/Scripts/waypoints/lib/jquery.waypoints.min.js"></script>
+    <script src="~/Scripts/jquery-nicescroll/jquery.nicescroll.min.js"></script>
+    <!-- 點籍href之後可以滑到指定的section -->
+    <script src="~/Scripts/jquery-easing/jquery.easing.min.js"></script>
+    <script src="~/Scripts/plugin/src/js/plugin.js"></script>
+    <script type="text/javascript">
+        //Hide Overflow of Body on DOM Ready //
+        $(document).ready(function () {
+            $("body").css("overflow", "hidden");
+        });
+
+        // Show Overflow of Body when Everything has Loaded
+        $(window).load(function () {
+            $("body").css("overflow", "visible");
+            var nice = $('html').niceScroll({
+                cursorborder: "5",
+                cursorcolor: "#00AFF0",
+                cursorwidth: "3px",
+                boxzoom: true,
+                autohidemode: true
+            });
+
+        });
+    </script>
+
+</body>
+</html>
